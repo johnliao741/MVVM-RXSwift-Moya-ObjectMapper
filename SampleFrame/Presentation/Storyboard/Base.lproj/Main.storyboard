@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iU-bf-YSv">
+                                <rect key="frame" x="175.66666666666666" y="415.66666666666669" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVe-NB-pBv">
+                                <rect key="frame" x="0.0" y="368.66666666666669" width="393" height="115"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUs-ME-80O" customClass="MyTextFieldView" customModule="SampleFrame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="hFX-3F-bt6"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="hint" value="請輸入帳號"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="pp"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TjB-lC-Wbu" customClass="MyTextFieldView" customModule="SampleFrame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="65" width="393" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="osX-Lj-POk"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="hint" value="請輸入密碼"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="terminal" catalog="system"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="TjB-lC-Wbu" secondAttribute="bottom" id="I3e-Bq-ODd"/>
+                                    <constraint firstItem="TjB-lC-Wbu" firstAttribute="top" secondItem="tUs-ME-80O" secondAttribute="bottom" constant="15" id="K0G-67-Okb"/>
+                                    <constraint firstItem="tUs-ME-80O" firstAttribute="leading" secondItem="fVe-NB-pBv" secondAttribute="leading" id="K7n-We-rZm"/>
+                                    <constraint firstAttribute="trailing" secondItem="tUs-ME-80O" secondAttribute="trailing" id="fJn-8R-OLG"/>
+                                    <constraint firstItem="TjB-lC-Wbu" firstAttribute="leading" secondItem="fVe-NB-pBv" secondAttribute="leading" id="mtQ-ku-xf5"/>
+                                    <constraint firstAttribute="trailing" secondItem="TjB-lC-Wbu" secondAttribute="trailing" id="ove-uQ-IYi"/>
+                                    <constraint firstItem="tUs-ME-80O" firstAttribute="top" secondItem="fVe-NB-pBv" secondAttribute="top" id="vbJ-wS-LTm"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ol-0G-flS">
+                                <rect key="frame" x="0.0" y="483.66666666666674" width="393" height="334.33333333333326"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPf-Ew-sQP" userLabel="login">
+                                        <rect key="frame" x="163.66666666666666" y="149.66666666666669" width="65.666666666666657" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Login">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jRP-Qx-2XG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="IPf-Ew-sQP" firstAttribute="centerY" secondItem="9Ol-0G-flS" secondAttribute="centerY" id="vex-Ib-d2r"/>
+                                    <constraint firstItem="IPf-Ew-sQP" firstAttribute="centerX" secondItem="9Ol-0G-flS" secondAttribute="centerX" id="yEY-rg-V34"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fVe-NB-pBv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D4k-Xm-9GF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Ol-0G-flS" secondAttribute="bottom" id="Kg2-dX-Rio"/>
+                            <constraint firstItem="fVe-NB-pBv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OwV-Vy-X2m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Ol-0G-flS" secondAttribute="trailing" id="efV-zJ-tsq"/>
+                            <constraint firstItem="7iU-bf-YSv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gGg-zi-0xK"/>
+                            <constraint firstItem="fVe-NB-pBv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="h6X-h2-9PJ"/>
+                            <constraint firstItem="9Ol-0G-flS" firstAttribute="top" secondItem="fVe-NB-pBv" secondAttribute="bottom" id="hLu-ZW-Df2"/>
+                            <constraint firstItem="9Ol-0G-flS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="n0n-gn-Pbd"/>
+                            <constraint firstItem="7iU-bf-YSv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="paI-RF-DKN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fVe-NB-pBv" secondAttribute="trailing" id="uck-f0-PGq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="account" destination="tUs-ME-80O" id="XYt-Em-7Vp"/>
+                        <outlet property="display" destination="7iU-bf-YSv" id="xjV-gp-Y5O"/>
+                        <outlet property="password" destination="TjB-lC-Wbu" id="oYl-ML-p5C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pp" width="384" height="384"/>
+        <image name="terminal" catalog="system" width="128" height="93"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
