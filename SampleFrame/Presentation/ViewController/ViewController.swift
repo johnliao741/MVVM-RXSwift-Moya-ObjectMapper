@@ -25,7 +25,7 @@ class ViewController: BaseViewController {
         
     }
     override func viewDidAppear(_ animated: Bool) {
-//        viewModel.login(account: "0968784993", password: "aA1123456")
+
        
     }
     func initView(){
